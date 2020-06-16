@@ -46,6 +46,10 @@ install OpenFAAS
 
     arkade install openfaas
 
+install openFAAS CLI
+
+    curl -sSL https://cli.openfaas.com | sudo sh
+
 check services
 
     kubectl get svc -n openfaas
@@ -58,13 +62,14 @@ forward port
 
     kubectl port-forward svc/gateway -n openfaas 31112:8080
 
+Load OpenFAAS dashboard
+
+[localhost:31112](http://localhost:31112/ui/)
 
 
 
-
-
-Notes:
+### Additional Notes
 
 Kill port in use:
 
-    fuser -k 31113/tcp
+    fuser -k 31112/tcp
